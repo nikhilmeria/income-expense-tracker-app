@@ -7,12 +7,12 @@
 		"node": "8.12.0"
 	},
 	"scripts": {
-		"client-install": "npm install --prefix client",
-		"start": "node app",
+		"postinstall": "npm --prefix client install",
+		"build": "npm --prefix client run build",
+		"start": "node app.js",
 		"server": "nodemon app",
 		"client": "npm start --prefix client",
-		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},
 	"author": "Baby Hanuman",
 	"license": "ISC",
