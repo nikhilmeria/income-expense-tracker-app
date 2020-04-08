@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "backend for cheers frontend",
 	"main": "app.js",
+	"engines": {
+		"node": "8.12.0"
+	},
 	"scripts": {
 		"start": "node app",
 		"server": "nodemon app",
