@@ -8,7 +8,7 @@ const AddTransaction = (props) => {
 	const context = useContext(StoreContext);
 
 	//console.log(' AddTransaction props => ', props);
-	console.log(' AddTransaction context => ', context);
+	//console.log(' AddTransaction context => ', context);
 
 	const hanldeAddTransaction = (e) => {
 		e.preventDefault();

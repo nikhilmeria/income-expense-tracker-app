@@ -1,0 +1,6 @@
+1. we add a "proxy" property in frontend package.json so that we dont need to type the complete url ie "http://localhost:5000" while making request to the server from frontend. chk from 44th min in video.
+video url -> https://www.youtube.com/watch?v=KyWaXA_NvT0
+both the frontend and backend are in one folder
+start the app by running "npm run dev" as defined in backend's package.json for development
+for production , after creating a build from the client folder, we will run the app as "npm start".  see from 1:06 min in the video. travery Media videos
+for any deployment issue chk this thread - https://github.com/bradtraversy/mern_shopping_list/issues/7

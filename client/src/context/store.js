@@ -15,11 +15,11 @@ export const StoreContext = createContext(initState);
 //create store Provider
 export const StoreProvider = (props) => {
 	const [state, dispatch] = useReducer(StoreReducer, initState);
-	console.log('state in StoreProvider => ', state);
+	//	console.log('state in StoreProvider => ', state);
 
 	//get transactions action
 	async function getTransac() {
-		console.log('Action get called');
+		//	console.log('Action get called');
 		try {
 			const resp = await axios.get('/trnx');
 			dispatch({
@@ -27,7 +27,7 @@ export const StoreProvider = (props) => {
 				payload: resp.data.data,
 			});
 		} catch (err) {
-			console.log('get err in store => ', err.response);
+			//	console.log('get err in store => ', err.response);
 			dispatch({
 				type: 'ERR',
 				payload: err.response.data.message,
@@ -37,7 +37,7 @@ export const StoreProvider = (props) => {
 
 	//del Action
 	async function delTransac(id) {
-		console.log('Action del called => ', id);
+		//	console.log('Action del called => ', id);
 		try {
 			await axios.delete(`/trnx/del/${id}`);
 			dispatch({
@@ -45,7 +45,7 @@ export const StoreProvider = (props) => {
 				payload: id,
 			});
 		} catch (err) {
-			console.log('del err in store => ', err.response);
+			//	console.log('del err in store => ', err.response);
 			dispatch({
 				type: 'ERR',
 				payload: err.response.data.message,
@@ -57,7 +57,7 @@ export const StoreProvider = (props) => {
 
 	//add Action
 	async function addTransac(data) {
-		console.log('Action add called => ', data);
+		//	console.log('Action add called => ', data);
 		try {
 			const resp = await axios.post('/trnx/add', data, {
 				headers: {
@@ -69,7 +69,7 @@ export const StoreProvider = (props) => {
 				payload: resp.data.data,
 			});
 		} catch (err) {
-			console.log('del err in store => ', err.response);
+			//	console.log('del err in store => ', err.response);
 			dispatch({
 				type: 'ERR',
 				payload: err.response.data.message,

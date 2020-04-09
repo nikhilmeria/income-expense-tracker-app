@@ -15,7 +15,7 @@ const AddModal = () => {
 		right: 0,
 		bottom: 20,
 		left: 'auto',
-		position: 'fixed'
+		position: 'fixed',
 	};
 	const style2 = {
 		margin: 0,
@@ -23,7 +23,7 @@ const AddModal = () => {
 		right: 'auto',
 		bottom: 20,
 		left: '0',
-		position: 'fixed'
+		position: 'fixed',
 	};
 	const [modalIsOpen, setModelIsOpen] = useState(false);
 	let [btnValue, setBtnValue] = useState(0);
@@ -39,7 +39,7 @@ const AddModal = () => {
 	};
 
 	const handleModal = () => {
-		console.log('btn => ', btnValue);
+		//	console.log('btn => ', btnValue);
 		setModelIsOpen(!modalIsOpen);
 	};
 	return (
@@ -49,8 +49,8 @@ const AddModal = () => {
 				onRequestClose={handleModal}
 				style={{
 					overlay: {
-						backgroundColor: 'lightGrey'
-					}
+						backgroundColor: 'lightGrey',
+					},
 				}}
 			>
 				<AddTransaction modal={handleModal} btnValue={btnValue} />
@@ -59,7 +59,7 @@ const AddModal = () => {
 				color="primary"
 				aria-label="add"
 				style={style1}
-				onClick={e => {
+				onClick={(e) => {
 					handleBtnClick1();
 					handleModal(e);
 				}}
@@ -71,7 +71,7 @@ const AddModal = () => {
 				size="large"
 				aria-label="add"
 				style={style2}
-				onClick={e => {
+				onClick={(e) => {
 					handleBtnClick2();
 					handleModal(e);
 				}}
